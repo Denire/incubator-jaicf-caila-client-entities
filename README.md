@@ -5,7 +5,7 @@ of such an entity are accessible to the client only.
 
 > Client entities are used when personalization is required to identify intents. For example, they can be used to process a client contact list.
 
-Client entities can be used in a scenario, intents and slot filling.
+Client entities can be used in a scenario, intents and slot filling. The main documentation (for JAICP) is located [here](https://help.just-ai.com/#/docs/en/NLU_core/client_entities/client_entities.md).
 
 ## Quick start
 
