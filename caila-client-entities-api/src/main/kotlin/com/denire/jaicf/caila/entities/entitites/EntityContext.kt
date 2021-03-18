@@ -1,4 +1,4 @@
-package com.justai.jaicf.caila.entitites
+package com.denire.jaicf.caila.entities.entitites
 
 import com.justai.jaicf.api.BotRequest
 import com.justai.jaicf.context.ActionContext

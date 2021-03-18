@@ -1,4 +1,4 @@
-package com.justai.jaicf.caila.entitites.model
+package com.denire.jaicf.caila.entities.entitites.model
 
 import kotlinx.serialization.Serializable
 

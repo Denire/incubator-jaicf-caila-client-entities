@@ -1,11 +1,11 @@
-package com.justai.jaicf.caila.entitites.ktor
+package com.denire.jaicf.caila.entities.entitites.ktor
 
-import com.justai.jaicf.caila.entitites.ClientEntitiesApi
-import com.justai.jaicf.caila.entitites.model.CreateNamedEntityRecordData
-import com.justai.jaicf.caila.entitites.model.NamedEntityRecordData
-import com.justai.jaicf.caila.entitites.model.NamedEntityRecordType
-import com.justai.jaicf.caila.entitites.model.NamedEntityWithRecordsData
-import com.justai.jaicf.caila.entitites.model.UpdateNamedEntityRecordData
+import com.denire.jaicf.caila.entities.entitites.ClientEntitiesApi
+import com.denire.jaicf.caila.entities.entitites.model.CreateNamedEntityRecordData
+import com.denire.jaicf.caila.entities.entitites.model.NamedEntityRecordData
+import com.denire.jaicf.caila.entities.entitites.model.NamedEntityRecordType
+import com.denire.jaicf.caila.entities.entitites.model.NamedEntityWithRecordsData
+import com.denire.jaicf.caila.entities.entitites.model.UpdateNamedEntityRecordData
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.features.json.*

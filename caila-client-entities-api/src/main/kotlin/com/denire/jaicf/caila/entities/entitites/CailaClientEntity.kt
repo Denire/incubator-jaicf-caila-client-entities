@@ -1,9 +1,9 @@
-package com.justai.jaicf.caila.entitites
+package com.denire.jaicf.caila.entities.entitites
 
 import com.justai.jaicf.activator.caila.CailaNLUSettings
-import com.justai.jaicf.caila.entitites.ktor.CailaEntitiesKtorApi
-import com.justai.jaicf.caila.entitites.model.NamedEntityRecordData
-import com.justai.jaicf.caila.entitites.model.NamedEntityRecordType
+import com.denire.jaicf.caila.entities.entitites.ktor.CailaEntitiesKtorApi
+import com.denire.jaicf.caila.entities.entitites.model.NamedEntityRecordData
+import com.denire.jaicf.caila.entities.entitites.model.NamedEntityRecordType
 
 interface ICailaClientEntity {
     val name: String

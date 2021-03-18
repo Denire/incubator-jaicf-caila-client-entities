@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm")
 }
 
-group = "com.justai.jaicf"
+group = "com.denire.jaicf"
 version = "0.14.0"
 
 repositories {

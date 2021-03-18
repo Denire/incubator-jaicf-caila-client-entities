@@ -1,8 +1,8 @@
-package com.justai.jaicf.caila.entitites
+package com.denire.jaicf.caila.entities.entitites
 
-import com.justai.jaicf.caila.entitites.model.NamedEntityRecordData
-import com.justai.jaicf.caila.entitites.model.NamedEntityRecordType
-import com.justai.jaicf.caila.entitites.model.NamedEntityWithRecordsData
+import com.denire.jaicf.caila.entities.entitites.model.NamedEntityRecordData
+import com.denire.jaicf.caila.entities.entitites.model.NamedEntityRecordType
+import com.denire.jaicf.caila.entities.entitites.model.NamedEntityWithRecordsData
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async

@@ -4,9 +4,9 @@ import com.justai.jaicf.BotEngine
 import com.justai.jaicf.activator.caila.CailaIntentActivator
 import com.justai.jaicf.activator.caila.CailaNLUSettings
 import com.justai.jaicf.activator.regex.RegexActivator
-import com.justai.jaicf.caila.entitites.CailaClientEntity
-import com.justai.jaicf.caila.entitites.ClientEntityFactory
-import com.justai.jaicf.caila.entitites.EntityContext
+import com.denire.jaicf.caila.entities.entitites.CailaClientEntity
+import com.denire.jaicf.caila.entities.entitites.ClientEntityFactory
+import com.denire.jaicf.caila.entities.entitites.EntityContext
 import com.justai.jaicf.channel.jaicp.JaicpPollingConnector
 import com.justai.jaicf.channel.jaicp.channels.ChatWidgetChannel
 
