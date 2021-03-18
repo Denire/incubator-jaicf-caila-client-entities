@@ -5,7 +5,8 @@ of such an entity are accessible to the client only.
 
 > Client entities are used when personalization is required to identify intents. For example, they can be used to process a client contact list.
 
-Client entities can be used in a scenario, intents and slot filling. The main documentation (for JAICP) is located [here](https://help.just-ai.com/#/docs/en/NLU_core/client_entities/client_entities.md).
+Client entities can be used in a scenario, intents and slot filling. The main documentation (for JAICP) is
+located [here](https://help.just-ai.com/#/docs/en/NLU_core/client_entities/client_entities.md).
 
 ## Quick start
 
@@ -47,8 +48,48 @@ that in our training phrases, we add the reference to the
 
 ### Configuration
 
+As this is incubator project and it's not hosted on MavenCentral or Jcenter, we provide artifact hosting via Github
+Packages.
+
+How to add package to your scenario:
+
+1. [Create GitHub Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+   with permissions `write:packages` and `read:packages`
+2. Connect your gradle buildscript with remote GitHub packages server
+
+```kotlin
+repositories {
+    mavenCentral()
+    jcenter()
+    // ... your other repositories
+
+    // and repository for caila-client-entities-api module
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/denire/incubator-jaicf-caila-client-entities")
+        credentials {
+            username = project.findProperty("gpr.user") as String
+            password = project.findProperty("gpr.key") as String
+        }
+    }
+}
 ```
-... add dependencies for this module when this module is published on github 
+3. Add your `gpr.user` and `gpr.key` to `gradle.properties` file
+```
+gpr.user=vmetelyagin
+gpr.key=<TOKEN>
+```
+4. Add dependency for this module
+```kotlin
+dependencies {
+    implementation(kotlin("stdlib"))
+    implementation("com.justai.jaicf:core:0.13.0")
+    implementation("com.justai.jaicf:caila:0.13.0")
+    // ... and your other dependencies
+    
+    implementation("com.denire.jaicf:caila-client-entities-api:0.13.0")
+}
+
 ```
 
 ### BotEngine
@@ -74,13 +115,15 @@ val ClientEntitiesBot = BotEngine(
 ```
 
 ### Scenario
+
 Right after we created extension property with
+
 ```kotlin
 val EntityContext.Contact: CailaClientEntity
     get() = entitiesFactory.getEntity("Contact", request.clientId)
 ```
-we have a client entity object inside scenario, so we can use it to setRecords, getRecords, etc. 
 
+we have a client entity object inside scenario, so we can use it to setRecords, getRecords, etc.
 
 ```kotlin
 state("getContact") {
@@ -114,6 +157,7 @@ state("setContact") {
 ```
 
 ### Conversation example
+
 ```kotlin
 TODO()
 ```
