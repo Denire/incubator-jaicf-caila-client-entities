@@ -1,0 +1,4 @@
+### PACKAGE BACKLOG
+
+* add conversation example (like in JAICP)
+* publish sources
