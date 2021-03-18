@@ -162,3 +162,7 @@ state("setContact") {
 TODO()
 ```
 
+
+## Licensing
+
+JAICF Incubator modules are distributed under [Apache 2.0](LICENSE) license meaning you are free to use and modify it without the need to open your project source code.
