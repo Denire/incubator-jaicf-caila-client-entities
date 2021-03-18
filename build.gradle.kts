@@ -1,19 +1,17 @@
 plugins {
-    kotlin("jvm") version "1.4.21"
+    kotlin("jvm") version "1.4.10"
 }
 
 group = "com.justai.jaicf"
-version = "0.14.0"
+version = "0.13.0"
 
-repositories {
-    mavenCentral()
-    jcenter()
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
 }
-
-val jaicf = "0.13.0"
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("com.justai.jaicf:caila:$jaicf")
-    implementation("com.justai.jaicf:core:$jaicf")
 }

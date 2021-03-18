@@ -12,6 +12,10 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("com.justai.jaicf:core:0.13.0")
-    implementation("com.justai.jaicf:caila:0.13.0")
+    implementation(jaicf("core"))
+    implementation(jaicf("caila"))
+    implementation(jaicf("jaicp"))
+    implementation(project(":caila-client-entities-api"))
+
+    implementation("ch.qos.logback:logback-classic:1.2.3")
 }

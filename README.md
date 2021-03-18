@@ -47,6 +47,12 @@ that in our training phrases, we add the reference to the
 
 ### Configuration
 
+```
+... add dependencies for this module when this module is published on github 
+```
+
+### BotEngine
+
 ```kotlin
 // 1. create settings to use CAILA
 val cailaSettings = CailaNLUSettings("token")
@@ -55,7 +61,7 @@ val cailaSettings = CailaNLUSettings("token")
 val entitiesFactory = ClientEntityFactory(cailaSettings)
 
 // 3. create shortcut to use Contact entity in scenario action block
-val FactoryContext.Contact: CailaClientEntity
+val EntityContext.Contact: CailaClientEntity
     get() = entitiesFactory.getEntity("Contact", request.clientId)
 
 val ClientEntitiesBot = BotEngine(
@@ -68,8 +74,43 @@ val ClientEntitiesBot = BotEngine(
 ```
 
 ### Scenario
+Right after we created extension property with
 ```kotlin
-TODO()
+val EntityContext.Contact: CailaClientEntity
+    get() = entitiesFactory.getEntity("Contact", request.clientId)
+```
+we have a client entity object inside scenario, so we can use it to setRecords, getRecords, etc. 
+
+
+```kotlin
+state("getContact") {
+    activators {
+        regex("getContact")
+    }
+    action {
+        reactions.say(Contact.getEntityRecords().joinToString())
+    }
+}
+
+state("addContact") {
+    activators {
+        regex("addContact")
+    }
+    action {
+        Contact.addSynonyms(listOf("denire", "v.metelyagin"), "developer")
+        reactions.say("ok")
+    }
+}
+
+state("setContact") {
+    activators {
+        regex("setContact")
+    }
+    action {
+        Contact.setSynonyms(listOf("denire", "v.metelyagin"), "developer")
+        reactions.say("ok")
+    }
+}
 ```
 
 ### Conversation example

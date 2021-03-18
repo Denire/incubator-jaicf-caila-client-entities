@@ -1,5 +1,8 @@
 package com.justai.jaicf.caila.entitites.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class NamedEntityRecordData (
     val type: NamedEntityRecordType,
     val rule: List<String>,
