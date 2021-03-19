@@ -5,4 +5,4 @@ import com.justai.jaicf.context.ActionContext
 import com.justai.jaicf.context.ActivatorContext
 import com.justai.jaicf.reactions.Reactions
 
-typealias EntityContext = ActionContext<ActivatorContext, BotRequest, Reactions>
+typealias EntityContext = ActionContext<out ActivatorContext, out BotRequest, out Reactions>
